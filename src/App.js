@@ -1,11 +1,24 @@
 import React from "react";
-import "./style.css";
 
-export default function App() {
+
+function Welcome(probs){
+  return <h1>Hello, {props.name}</h1>;
+}
+
+function clickHandler(){
+  window.alert("Hello from React!");
+}
+
+function App(){
   return (
     <div>
-      <h1>Hello!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <Welcome name="Sara"/>
+      <h1 style={{color:"red"}}> some text </h1>
+      <button onClick={clickHandler}>
+        show message
+      </button>
     </div>
+
   );
 }
+export default App;
