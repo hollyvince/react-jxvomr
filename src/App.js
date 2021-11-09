@@ -1,24 +1,22 @@
 import React from "react";
 
 
-function Welcome(probs){
+function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
-function clickHandler(){
-  window.alert("Hello from React!");
-}
-
-function App(){
+function App() {
   return (
     <div>
-      <Welcome name="Sara"/>
-      <h1 style={{color:"red"}}> some text </h1>
-      <button onClick={clickHandler}>
-        show message
-      </button>
+      <Welcome name="Sara" />
+      <Welcome name="Cahal" />
+      <Welcome name="Edite" />
     </div>
-
   );
 }
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
 export default App;
