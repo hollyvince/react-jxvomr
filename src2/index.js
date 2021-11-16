@@ -3,4 +3,4 @@ import ReactDOM from 'react-dom';
 
 import MedicalTreatment from './MedicalTreatment';
 
-ReactDom.render(<MedicalTreatment />, document.getElementbyId('root'));
+ReactDOM.render(<MedicalTreatment />, document.getElementbyId('root'));
