@@ -1,10 +1,28 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import './style.css';
-import App from "./App";
-const element = <h1>Hello, World</h1>
+import App from './App';
 
-ReactDOM.render(
-element,
-document.getElementById("root")
-);
+class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      name: 'Holly'
+    };
+  }
+
+render(){
+  return (
+    <div>
+      <App name={this.state.name}/>
+      <p>
+        Hello
+        </p>
+      </div>
+  );
+  }
+}
+
+render(<App/>, document.getElementById('root'));
+export default App;
+  
